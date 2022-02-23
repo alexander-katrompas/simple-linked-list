@@ -37,7 +37,8 @@ void buildList1(Item **head) {
 }
 
 void buildList2(Item **head) {
-     //more elegant solution
+     // more elegant and efficent solution
+     // more difficult to understand
 
      Item *newItem;
      for(int i=0; i<DAYS; i++){
@@ -56,7 +57,9 @@ void buildList2(Item **head) {
 }
 
 void buildList3(Item*& last_ptr, int dayofweek) {
-    //using recursion
+    // using recursion
+    // most elegant solution
+    // most difficult to understand
     
     if (dayofweek < DAYS) {
         last_ptr = new Item;
@@ -90,14 +93,12 @@ int main() {
 
     Item *headptr = NULL;
 
-    // use only one of these at a time to see how they work
-
-    //buildList1(&headptr);
+    // uncomment and use only one of these at a time to see how they work
+    buildList1(&headptr);
     //buildList2(&headptr);
-    buildList3(headptr);
+    //buildList3(headptr);
     displayList(headptr);
 
     return 0;
 }
-
 
